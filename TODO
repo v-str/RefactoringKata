@@ -1,0 +1,37 @@
+Changes plan:
+ 1.  Write some basic unit tests to prove, that code is somehow working
+ 2.  Fix code formatting
+ 3.  Fix naming
+ 4.  Fix operators representations
+ 5.  Remove macro usage
+ 6.  Write unit tests to reprocude FIXME bugs
+ 7.  Fix FIXME bugs
+ 8.  Write unit tests for new behaviour required in TODOS
+ 9.  Fix TODOS
+ 10. Write tests to compare number 9. version results with later versions.
+     (Function behaviour should not change after 9. is done)
+ 11. Remove unnecessary constructs
+ 12. Refactor rest of code
+ 13. Write tests to get 100% code coverage of function
+ 14. Write description of function, document algorithmic complexity
+
+ Note:
+ 1.  Code must compile by gcc and clang compilers with all warning flags
+     turned on + -Werror
+ 2.  No macro usage
+ 3.  At the end of refactoring function should shrink 3-4 times (to 8-15 loc)
+ 4.  No need to have more than single function in final version
+ 5.  Can use lambda if necessary
+ 6.  Can change function signature if needed (but always single 'in' argument,
+     single return value)
+ 7.  No global state
+ 8.  Must use c++11 features and stl
+ 9.  For unit testing gtest framework is nice solution
+ 10. Document all steps with separate git commits
+ 11. All tests should pass valgrind/asan/msan/ubsan cleanly
+ 12. To improve code quallity you should look at problem domain and ask
+     yourself questions about what this code is really doing, than express
+     this knowledge in new version of code
+ 13. Purpose of this challenge to show how small piece of bad code can ruin
+     your life, and how it's important to use standart tools of C++ to express
+     intentions in code
