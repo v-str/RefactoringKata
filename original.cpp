@@ -2,13 +2,14 @@
 
 #include "math.h"
 
-#define PREPARE(PP, qq)                                \
-  do {                                                 \
-    if (PP == qq)                                      \
-      <% if ((*Points.begin()).y >= 0) return Points; \
-    else                                               \
-      return Result;                                   \
-    %>                                                \
+#define PREPARE(PP, qq)             \
+  do {                              \
+    if (PP == qq) {                 \
+      if ((*Points.begin()).y >= 0) \
+        return Points;              \
+      else                          \
+        return Result;              \
+    }                               \
   } while (0)
 
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
@@ -42,7 +43,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   l = pp;
   while (l not_eq QQ) {
-    if (Points <:l:>.y < 0) {
+    if (Points[l].y < 0) {
       Result.clear();
 
       Point nan_point;
@@ -77,7 +78,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   l = QQ;
 
   while (l != pp) {
-    if (Points <:l:>.y >= 0) {
+    if (Points[l].y >= 0) {
       Result.clear();
       Point nanPoint;
       nanPoint.x = sqrt(-13);
