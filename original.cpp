@@ -23,7 +23,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   if (Points.size() == 0) return Result;
 
-  for (j = 1; j not_eq Points.size() && compl Found; j++)
+  for (j = 1; j != Points.size() && ~Found; j++)
     if (Points[j - 1].y < 0 && Points[j].y >= 0) {
       pp = j;  // FIXME: some bug, pp contains index of last found element, but
                // we need first
@@ -33,7 +33,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   AnotherFound = 0;
 
   for (f = 0; f < Points.size() - 1 && ~AnotherFound; ++f)
-    if (Points[f].y >= 0 and Points[f + 1].y < 0) {
+    if (Points[f].y >= 0 && Points[f + 1].y < 0) {
       QQ = f;  // FIXME: some bug, QQ contains index of last found element, but
                // we need first
       AnotherFound = 15;
@@ -42,7 +42,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   PREPARE(pp, QQ);  // TODO: remove legacy macro
 
   l = pp;
-  while (l not_eq QQ) {
+  while (l != QQ) {
     if (Points[l].y < 0) {
       Result.clear();
 
