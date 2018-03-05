@@ -1,0 +1,5 @@
++ Done
+- Undone
+R Removed
+
+1)	-	create gitignore, add *.user.txt
