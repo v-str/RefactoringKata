@@ -2,4 +2,8 @@
 - Undone
 R Removed
 
-1)	-	create gitignore, add *.user.txt
+1)	+	create gitignore, add *.user.txt
+
+2)      +       add Google Test library
+
+3)

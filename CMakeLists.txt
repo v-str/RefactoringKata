@@ -11,13 +11,14 @@ add_subdirectory(googletest)
 
 include_directories ("${CMAKE_CURRENT_SOURCE_DIR}/include"
                      "${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest/include"
-                     "${CMAKE_CURRENT_SOURCE_DIR}/tests"
+                     "${CMAKE_CURRENT_SOURCE_DIR}/tests/include"
                      "${CMAKE_CURRENT_SOURCE_DIR}/txt_files")
 
-file (GLOB HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h")
+file (GLOB HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h"
+                   "${CMAKE_CURRENT_SOURCE_DIR}/tests/include/*.h")
 
 file (GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/sources/*.cpp"
-                   "${CMAKE_CURRENT_SOURCE_DIR}/tests/*.cpp")
+                   "${CMAKE_CURRENT_SOURCE_DIR}/tests/src/*.cpp")
 
 
 file (GLOB TXT_FILE "${CMAKE_CURRENT_SOURCE_DIR}/txt_files/*.txt")
