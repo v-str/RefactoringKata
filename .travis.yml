@@ -1,0 +1,23 @@
+sudo: require
+
+language: cpp
+
+os:
+    - linux
+
+compiler:
+    - gcc
+    - clang
+
+dist: trusty
+
+source:
+    - CI/before_install.sh
+
+matrix:
+    - os: osx 
+
+script:
+    - cmake CMakeLists.txt
+    - make
+    - ./RefactoringKata

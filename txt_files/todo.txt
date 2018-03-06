@@ -6,4 +6,6 @@ R Removed
 
 2)      +       add Google Test library
 
-3)
+3)      -       run Travis CI
+
+4)      -       add Codecov to the project
