@@ -7,7 +7,14 @@
 
 class OriginalTestFixture : public ::testing::Test {
  public:
-  OriginalTestFixture(const Point& point) : point_(point) {}
+  virtual void SetUp() {
+    point_.x = 10;
+    point_.y = 20;
+  }
+
+  virtual void TearDown() {}
+
+  const Point GetPoint() { return point_; }
 
  private:
   Point point_;
