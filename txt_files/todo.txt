@@ -9,3 +9,5 @@ R Removed
 3)      -       run Travis CI
 
 4)      -       add Codecov to the project
+
+5)      -       set environment variables for compilers
