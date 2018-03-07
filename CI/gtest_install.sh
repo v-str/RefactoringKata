@@ -1,7 +1,8 @@
-#!bin/bash
-
+#!/bin/bash
 
 #gtest installation
+
+echo "BEFORE INSTALLATION"
 
 wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz
 
@@ -12,3 +13,5 @@ make
 
 sudo cp -a include/gtest /usr/include
 sudo cp -a libgtest_main.so libgtest.so /usr/lib/
+
+echo "AFTER INSTALLATION"

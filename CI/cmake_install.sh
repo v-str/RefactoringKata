@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #CMake
 CMAKE_VERSION=3.5.1
