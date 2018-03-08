@@ -6,19 +6,6 @@ cd /
 
 # CMake installation
 
-CMAKE_VERSION=3.5.1
-CMAKE_VERSION_DIR=v3.5
-
-CMAKE_OS=Linux-x86_64
-CMAKE_TAR=cmake-$CMAKE_VERSION-$CMAKE_OS.tar.gz
-CMAKE_URL=http://www.cmake.org/files/$CMAKE_VERSION_DIR/$CMAKE_TAR
-CMAKE_DIR=$(pwd)/cmake-$CMAKE_VERSION
-
-sudo wget --quiet $CMAKE_URL
-sudo mkdir -p $CMAKE_DIR
-sudo tar --strip-components=1 -xzf $CMAKE_TAR -C $CMAKE_DIR
-sudo export PATH=$CMAKE_DIR/bin:$PATH
-
 cmake --version
 
 ls
