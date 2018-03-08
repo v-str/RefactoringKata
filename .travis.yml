@@ -12,8 +12,8 @@ compiler:
 dist: trusty
 
 source:
-    - CI/cmake_install.sh
     - CI/gcc_install.sh
+    - CI/cmake_install.sh
     - CI/gtest_install.sh
 
 matrix:
