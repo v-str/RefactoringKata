@@ -12,9 +12,10 @@ compiler:
 dist: trusty
 
 source:
-    - CI/cmake_install.sh
-    - CI/gcc_install.sh
-    - CI/gtest_install.sh
+    - chmod 755 travis/cmake_install.sh travis/gcc_install.sh travis/gtest_install.sh
+    - ./travis/cmake_install.sh
+    - ./travis/gcc_install.sh
+    - ./travis/gtest_install.sh
 
 script:
     - cmake CMakeLists.txt

@@ -22,7 +22,7 @@ file (GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/sources/*.cpp"
                    "${CMAKE_CURRENT_SOURCE_DIR}/tests/src/*.cpp")
 
 file (GLOB MISC_FILES "${CMAKE_CURRENT_SOURCE_DIR}/txt_files/*.txt"
-                      "${CMAKE_CURRENT_SOURCE_DIR}/CI/*.sh")
+                      "${CMAKE_CURRENT_SOURCE_DIR}/travis/*.sh")
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${MISC_FILES})
 target_link_libraries(${PROJECT_NAME} gtest gtest_main)
