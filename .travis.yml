@@ -11,7 +11,7 @@ compiler:
 
 dist: trusty
 
-source:
+before_install:
     - chmod 755 travis/cmake_install.sh travis/gcc_install.sh travis/gtest_install.sh
     - bash ./travis/cmake_install.sh
     - bash ./travis/gcc_install.sh
