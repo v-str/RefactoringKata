@@ -11,8 +11,10 @@ compiler:
 
 dist: trusty
 
-install:
+before_install:
     - chmod 755 travis/install_dependencies.sh
+
+install:
     - ./travis/install_dependencies.sh
 
 script:
