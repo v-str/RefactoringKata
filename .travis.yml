@@ -23,6 +23,15 @@ before_install:
     - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
     - cd "${TRAVIS_BUILD_DIR}"
 
+install:
+  # g++4.8.1
+  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
+
+  # clang 3.9
+  - if [ "$CXX" == "clang++" ]; then sudo apt-get install --allow-unauthenticated -qq clang-3.9; fi
+  - if [ "$CXX" == "clang++" ]; then export CXX="clang++-3.9"; fi
+
 script:
     - cmake CMakeLists.txt
     - make

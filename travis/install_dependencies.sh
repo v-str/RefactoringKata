@@ -8,9 +8,8 @@ cd /home
 sudo mkdir tmp
 cd tmp
 
-# CMake installation
-
-cmake --version
+sudo apt-get install --reinstall cmake
+sudo apt-get install --reinstall make
 
 ls
 
