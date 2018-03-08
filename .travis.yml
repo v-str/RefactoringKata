@@ -13,9 +13,9 @@ dist: trusty
 
 before_install:
     - chmod 755 travis/cmake_install.sh travis/gcc_install.sh travis/gtest_install.sh
-    - bash ./travis/cmake_install.sh
-    - bash ./travis/gcc_install.sh
-    - bash ./travis/gtest_install.sh
+    - sudo ./travis/cmake_install.sh
+    - sudo ./travis/gcc_install.sh
+    - sudo ./travis/gtest_install.sh
 
 script:
     - cmake CMakeLists.txt
