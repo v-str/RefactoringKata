@@ -12,6 +12,7 @@ sudo cmake -DBUILD_SHARED_LIBS=ON .
 sudo make
 sudo cp -a include/gtest /usr/include
 sudo cp -a libgtest_main.so libgtest.so /usr/lib/
+sudo ldconfig -v | grep gtest
 which valgrind
 cd "${TRAVIS_BUILD_DIR}"
 
