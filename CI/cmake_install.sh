@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #CMake
+
+cd
 CMAKE_VERSION=3.5.1
 CMAKE_VERSION_DIR=v3.5
 

@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #C++14
+
+cd
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get update -qq
 sudo apt-get install -qq g++-5
