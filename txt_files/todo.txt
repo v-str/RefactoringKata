@@ -6,8 +6,8 @@ R Removed
 
 2)      +       add Google Test library
 
-3)      -       run Travis CI
+3)      +       run Travis CI
 
-4)      -       add Codecov to the project
+4)      -       add gcovr to the project
 
-5)      -       set environment variables for compilers
+5)      +       set environment variables for compilers
