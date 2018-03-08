@@ -24,11 +24,12 @@ before_install:
     - cd googletest-release-1.8.0
     - sudo cmake -DBUILD_SHARED_LIBS=ON .
     - sudo make
+    - ls
     - sudo cp -a include/gtest /usr/include
     - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
     - which valgrind
     - cd "${TRAVIS_BUILD_DIR}"
-    - echo UPDATE_INSTALLATION
+    - echo AFTER_INSTALLATION
 
 script:
     - cmake CMakeLists.txt
