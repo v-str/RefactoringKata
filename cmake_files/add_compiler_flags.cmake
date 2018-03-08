@@ -1,0 +1,6 @@
+macro (add_cxx_compiler_flags)
+    foreach (flag ${ARGV})
+        set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${flag}")
+        set (CMAKE_CXX_FLAGS PARENT_SCOPE)
+    endforeach ()
+endmacro ()
