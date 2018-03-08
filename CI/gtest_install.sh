@@ -2,7 +2,6 @@
 
 #gtest installation
 
-cd
 sudo apt-get -qq update
 sudo apt-get install -y libgtest-dev valgrind cmake
 sudo wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz
