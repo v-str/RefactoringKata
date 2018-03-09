@@ -60,6 +60,9 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   PREPARE(pp, QQ);  // TODO: remove legacy macro
 
+  // TESTED
+  ////////////////////////////////////////////////////////////////////////////
+
   l = pp;
   while (l != QQ) {
     if (Points[l].y < 0) {
@@ -75,6 +78,8 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
     if (++l >= Points.size()) l = 0;  // some magic
   }
+
+  /////////////////////////////////////////////////////////////////////////////
 
   //  l = pp;
   // while (l not_eq QQ) {
