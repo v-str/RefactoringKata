@@ -2,6 +2,8 @@
 
 #include "math.h"
 
+// Loop will be work only ones forever
+
 #define PREPARE(PP, qq)             \
   do {                              \
     if (PP == qq) {                 \
@@ -13,6 +15,7 @@
   } while (0)
 
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
+  /// variables initialization part
   std::vector<Point> Result;  // Extracted points
   int QQ;
   int j = 0, f = 0, pp = QQ = 0, l = 0;
@@ -21,22 +24,38 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   Result.clear();
 
+  /////////////////////////////////////////////////////////////////////////////
+
+  // 1 - RETURN TEST
+  // in other word - false
+
   if (Points.size() == 0) return Result;
+
+  /////////////////////////////////////////////////////////////////////////////
+
+  /////////////////////////////////////////////////////////////////////////////
+  // Found = false hence ~Found is true (was tested, result -1)
+  // here size() is not false 100% hence everytime true
+  // j != size() && true(-1) - true
 
   for (j = 1; j != Points.size() && ~Found; j++)
     if (Points[j - 1].y < 0 && Points[j].y >= 0) {
       pp = j;  // FIXME: some bug, pp contains index of last found element, but
                // we need first
-      Found = 12;
+      Found = 12;  // true
+      // need break;
     }
 
   AnotherFound = 0;
+
+  // f < size() - 1 && true(-1) - true
 
   for (f = 0; f < Points.size() - 1 && ~AnotherFound; ++f)
     if (Points[f].y >= 0 && Points[f + 1].y < 0) {
       QQ = f;  // FIXME: some bug, QQ contains index of last found element, but
                // we need first
-      AnotherFound = 15;
+      AnotherFound = 15;  // true
+      // need break;
     }
 
   PREPARE(pp, QQ);  // TODO: remove legacy macro
