@@ -17,7 +17,7 @@
   } while (0)
 
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
-  /// variables initialization part
+  // variables initialization part
   std::vector<Point> Result;  // Extracted points
   int QQ;
   int j = 0, f = 0, pp = QQ = 0, l = 0;
