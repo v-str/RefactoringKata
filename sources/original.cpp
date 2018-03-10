@@ -2,18 +2,6 @@
 
 #include "math.h"
 
-// Loop will be work only ones forever
-
-#define PREPARE(PP, qq)             \
-  do {                              \
-    if (PP == qq) {                 \
-      if ((*Points.begin()).y >= 0) \
-        return Points;              \
-      else                          \
-        return Result;              \
-    }                               \
-  } while (0)
-
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   std::vector<Point> Result;  // Extracted points
   int QQ;
@@ -45,7 +33,13 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       break;
     }
 
-  PREPARE(pp, QQ);  // TODO: remove legacy macro
+  if (pp == QQ) {
+    if ((*Points.begin()).y >= 0) {
+      return Points;
+    } else {
+      return Result;
+    }
+  }
 
   l = pp;
 
