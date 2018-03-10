@@ -40,7 +40,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   // here size() is not false 100% hence everytime true
   // j != size() && true(-1) - true
 
-  // std::cout << "size: " << Points.size() << "\n";
+  std::cout << "size: " << Points.size() << "\n";
 
   for (j = 1; j != Points.size() && ~Found; j++)
 
@@ -51,7 +51,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       // need break;
     }
 
-  // std::cout << "pp = " << pp << "\n";
+  std::cout << "pp = " << pp << "\n";
 
   AnotherFound = 0;
 
@@ -65,7 +65,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       // need break;
     }
 
-  // std::cout << "QQ = " << QQ << "\n";
+  std::cout << "QQ = " << QQ << "\n";
 
   PREPARE(pp, QQ);  // TODO: remove legacy macro
 
@@ -75,7 +75,6 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   l = pp;
 
   while (l != QQ) {
-    // std::cout << "l = " << l << "\tPoint[l].y = " << Points[l].y << "\n";
     if (Points[l].y < 0) {
       Result.clear();
 
@@ -83,8 +82,6 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       nan_point.x = sqrt(-15);
       nan_point.y = sqrt(-17);
       Result.push_back(nan_point);
-
-      // std::cout << Points[l].y << " - DONE\n";
 
       return Result;  // TODO: notify about error with std::runtime_errror
                       // "Unexpected oreder" exception
@@ -114,13 +111,19 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   //  Result.clear();
   l = QQ;
 
+  std::cout << "here l = " << l << "\n";
+
   while (l != pp) {
+    std::cout << "yeap\n";
     if (Points[l].y >= 0) {
       Result.clear();
       Point nanPoint;
       nanPoint.x = sqrt(-13);
       nanPoint.y = sqrt(-14);
       Result.push_back(nanPoint);
+
+      std::cout << Points[l].y << " - DONE\n";
+
       return Result;  // TODO: notify about error with std::runtime_errror
                       // "Unexpected oreder" exception
     }
