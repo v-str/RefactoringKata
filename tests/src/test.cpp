@@ -137,13 +137,50 @@ TEST(FunctionTest, getLessNegativeFirstElement) {
   temp_point.y = -1;
   test_vector.push_back(Point(temp_point));
 
-  for (unsigned int i = 0; i < test_vector.size(); ++i) {
-    cout << "temp_vector[" << i << "].y = " << test_vector[i].y << "\n";
-  }
-
   vector<Point> result_vector = extractPoints_1(test_vector);
 
   EXPECT_EQ(result_vector.size(), 1);
   EXPECT_EQ(result_vector.at(0).x, -2147483648);
   EXPECT_EQ(result_vector.at(0).y, -2147483648);
+}
+
+TEST(FunctionTest, getFinalFunctionResult) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+
+  temp_point.x = 0;
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = 1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = 1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = 1;
+  test_vector.push_back(Point(temp_point));
+
+  temp_point.y = 1;
+  test_vector.push_back(Point(temp_point));
+
+  vector<Point> result_vector = extractPoints_1(test_vector);
+
+  EXPECT_EQ(result_vector.size(), 0);
 }

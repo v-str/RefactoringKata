@@ -2,8 +2,6 @@
 
 #include "math.h"
 
-#include <iostream>
-
 // Loop will be work only ones forever
 
 #define PREPARE(PP, qq)             \
@@ -40,8 +38,6 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   // here size() is not false 100% hence everytime true
   // j != size() && true(-1) - true
 
-  std::cout << "size: " << Points.size() << "\n";
-
   for (j = 1; j != Points.size() && ~Found; j++)
 
     if (Points[j - 1].y < 0 && Points[j].y >= 0) {
@@ -50,8 +46,6 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       Found = 12;  // true
       // need break;
     }
-
-  std::cout << "pp = " << pp << "\n";
 
   AnotherFound = 0;
 
@@ -64,8 +58,6 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       AnotherFound = 15;  // true
       // need break;
     }
-
-  std::cout << "QQ = " << QQ << "\n";
 
   PREPARE(pp, QQ);  // TODO: remove legacy macro
 
@@ -111,18 +103,13 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   //  Result.clear();
   l = QQ;
 
-  std::cout << "here l = " << l << "\n";
-
   while (l != pp) {
-    std::cout << "yeap\n";
     if (Points[l].y >= 0) {
       Result.clear();
       Point nanPoint;
       nanPoint.x = sqrt(-13);
       nanPoint.y = sqrt(-14);
       Result.push_back(nanPoint);
-
-      std::cout << Points[l].y << " - DONE\n";
 
       return Result;  // TODO: notify about error with std::runtime_errror
                       // "Unexpected oreder" exception
