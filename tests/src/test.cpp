@@ -1,5 +1,7 @@
 #include <test.h>
 
+#include <gtest/gtest.h>
+
 using namespace function_test;
 
 TEST(FunctionTest, sizeTest) {
@@ -32,3 +34,5 @@ TEST(FunctionTest, getEmptyVector) {
 
   EXPECT_EQ(result_vector.size(), 0);
 }
+
+TEST(FunctionTest, getNonModifiedVector) {}

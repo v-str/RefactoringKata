@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 
-#include <gtest/gtest.h>
-
 #include <original.h>
 
 namespace function_test {
