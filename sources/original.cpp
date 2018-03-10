@@ -15,7 +15,6 @@
   } while (0)
 
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
-  // variables initialization part
   std::vector<Point> Result;  // Extracted points
   int QQ;
   int j = 0, f = 0, pp = QQ = 0, l = 0;
@@ -24,19 +23,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   Result.clear();
 
-  /////////////////////////////////////////////////////////////////////////////
-
-  // 1 - RETURN TEST
-  // in other word - false
-
   if (Points.size() == 0) return Result;
-
-  /////////////////////////////////////////////////////////////////////////////
-
-  /////////////////////////////////////////////////////////////////////////////
-  // Found = false hence ~Found is true (was tested, result -1)
-  // here size() is not false 100% hence everytime true
-  // j != size() && true(-1) - true
 
   for (j = 1; j != Points.size() && ~Found; j++)
     if (Points[j - 1].y < 0 && Points[j].y >= 0) {
@@ -54,14 +41,11 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
     if (Points[f].y >= 0 && Points[f + 1].y < 0) {
       QQ = f;
 
-      AnotherFound = 15;  // true
+      AnotherFound = 15;
       break;
     }
 
   PREPARE(pp, QQ);  // TODO: remove legacy macro
-
-  // TESTED
-  ////////////////////////////////////////////////////////////////////////////
 
   l = pp;
 
@@ -80,26 +64,6 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
     if (++l >= Points.size()) l = 0;  // some magic
   }
 
-  /////////////////////////////////////////////////////////////////////////////
-
-  //  l = pp;
-  // while (l not_eq QQ) {
-  // if (Points<:l:>.y < 0) {
-  //  Result.clear();
-
-  //  Point nan_point;
-  //  nan_point.x = sqrt(-1);
-  //  nan_point.y = sqrt(-1);
-  //  Result.push_back(nan_point);
-  //  return Result;  // TODO: notify about error with std::runtime_errror
-  //                  // "Unexpected oreder" exception
-  //}
-  //  std::vector<Point> Result;  // Extracted points
-  //  int j = 0, f = 0, pp = QQ = 0, l = 0;
-  //  bool Found = false;
-  //  auto AnotherFound = decltype(Found){Found};
-
-  //  Result.clear();
   l = QQ;
 
   while (l != pp) {
