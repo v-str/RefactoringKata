@@ -7,20 +7,8 @@ TEST(FunctionTest, sizeTest) {
   EXPECT_EQ(extractPoints_1(temp_vector).size(), 0);
 }
 
-TEST(FunctionTest, getNanPoint) {
-  std::vector<Point> temp_vector;
-
-  for (int i = 0; i < 10; ++i) {
-    Point point;
-    point.x = i + 1;
-    point.y = i + 1;
-    if (i % 2 == 0) {
-      point.y *= -i;
-    }
-    temp_vector.push_back(point);
-  }
-
-  std::vector<Point> result_vector = extractPoints_1(temp_vector);
+TEST_F(OriginalTestFixture, getNanPoint) {
+  std::vector<Point> result_vector = extractPoints_1(GetPoints());
 
   EXPECT_EQ(result_vector.size(), 1);
   EXPECT_EQ(result_vector.at(0).x, -2147483648);
