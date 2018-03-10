@@ -1,16 +1,34 @@
 #include <test.h>
 
-#include <iostream>
+using namespace function_test;
 
 TEST(FunctionTest, sizeTest) {
   std::vector<Point> temp_vector;
   EXPECT_EQ(extractPoints_1(temp_vector).size(), 0);
 }
 
-TEST_F(OriginalTestFixture, getNanPoint) {
-  std::vector<Point> result_vector = extractPoints_1(GetPoints());
+TEST(FunctionTest, getEmptyVector) {
+  vector<Point> test_vector;
 
-  EXPECT_EQ(result_vector.size(), 1);
-  EXPECT_EQ(result_vector.at(0).x, -2147483648);
-  EXPECT_EQ(result_vector.at(0).y, -2147483648);
+  Point temp_point;
+  temp_point.x = 0;
+  temp_point.y = -1;
+  test_vector.push_back(Point(temp_point));
+  temp_point.x = 1;
+  temp_point.y = 2;
+  test_vector.push_back(Point(temp_point));
+  temp_point.x = 1;
+  temp_point.y = -2;
+  test_vector.push_back(Point(temp_point));
+
+  for (unsigned int i = 0; i < test_vector.size(); ++i) {
+    std::cout << i << ") " << test_vector[i].x << " " << test_vector[i].y
+              << endl;
+  }
+
+  cout << endl;
+
+  vector<Point> result_vector = extractPoints_1(test_vector);
+
+  EXPECT_EQ(result_vector.size(), 0);
 }
