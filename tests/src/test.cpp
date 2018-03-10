@@ -16,23 +16,15 @@ TEST(FunctionTest, GetEmptyVector) {
 
   Point temp_point;
   temp_point.x = 0;
-  temp_point.y = -1;
-  test_vector.push_back(Point(temp_point));
 
-  temp_point.y = 1;
-  test_vector.push_back(Point(temp_point));
-
-  temp_point.y = -1;
-  test_vector.push_back(Point(temp_point));
-
-  temp_point.y = 1;
-  test_vector.push_back(Point(temp_point));
-
-  temp_point.y = 1;
-  test_vector.push_back(Point(temp_point));
-
-  temp_point.y = 1;
-  test_vector.push_back(Point(temp_point));
+  for (unsigned int i = 0; i < 6; ++i) {
+    if (i == 0 || i == 2) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    test_vector.push_back(Point(temp_point));
+  }
 
   vector<Point> result_vector = extractPoints_1(test_vector);
 
