@@ -55,14 +55,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   while (l != pp) {
     if (Points[l].y >= 0) {
-      Result.clear();
-      Point nanPoint;
-      nanPoint.x = sqrt(-13);
-      nanPoint.y = sqrt(-14);
-      Result.push_back(nanPoint);
-
-      return Result;  // TODO: notify about error with std::runtime_error
-                      // "Unexpected order" exception
+      throw std::runtime_error("Unexpected order");
     }
     if (++l >= Points.size()) l = 0;  // some magic
   }

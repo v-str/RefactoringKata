@@ -76,3 +76,27 @@ TEST(FunctionTest, NegativeFirstParameter) {
     EXPECT_EQ(error.what(), string("Unexpected order"));
   }
 }
+
+TEST(FunctionTest, PositiveFirstParameter) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (int i = 0; i < 6; ++i) {
+    if (i == 1 || i == 2 || i == 5) {
+      temp_point.y = 1;
+    } else {
+      temp_point.y = -1;
+    }
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  try {
+    vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    EXPECT_EQ(error.what(), string("Unexpected order"));
+  }
+}
