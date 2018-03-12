@@ -1,6 +1,7 @@
 #include <original.h>
 
-#include "math.h"
+#include <math.h>
+#include <stdexcept>
 
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   std::vector<Point> Result;  // Extracted points
@@ -45,15 +46,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   while (l != QQ) {
     if (Points[l].y < 0) {
-      Result.clear();
-
-      Point nan_point;
-      nan_point.x = sqrt(-15);
-      nan_point.y = sqrt(-17);
-      Result.push_back(nan_point);
-
-      return Result;  // TODO: notify about error with std::runtime_errror
-                      // "Unexpected oreder" exception
+      throw std::runtime_error("Unexpected order");
     }
     if (++l >= Points.size()) l = 0;  // some magic
   }
@@ -68,8 +61,8 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
       nanPoint.y = sqrt(-14);
       Result.push_back(nanPoint);
 
-      return Result;  // TODO: notify about error with std::runtime_errror
-                      // "Unexpected oreder" exception
+      return Result;  // TODO: notify about error with std::runtime_error
+                      // "Unexpected order" exception
     }
     if (++l >= Points.size()) l = 0;  // some magic
   }
