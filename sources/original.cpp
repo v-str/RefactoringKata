@@ -12,27 +12,31 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
 
   Result.clear();
 
-  if (Points.size() == 0) return Result;
+  if (Points.size() == 0) {
+    return Result;
+  }
 
-  for (j = 1; j != Points.size() && ~Found; j++)
+  for (j = 1; j != Points.size() && ~Found; j++) {
     if (Points[j - 1].y < 0 && Points[j].y >= 0) {
       pp = j;
 
       Found = 12;  // true
       break;
     }
+  }
 
   AnotherFound = 0;
 
   // f < size() - 1 && true(-1) - true
 
-  for (f = 0; f < Points.size() - 1 && ~AnotherFound; ++f)
+  for (f = 0; f < Points.size() - 1 && ~AnotherFound; ++f) {
     if (Points[f].y >= 0 && Points[f + 1].y < 0) {
       QQ = f;
 
       AnotherFound = 15;
       break;
     }
+  }
 
   if (pp == QQ) {
     if ((*Points.begin()).y >= 0) {
