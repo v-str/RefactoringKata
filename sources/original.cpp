@@ -6,8 +6,6 @@
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
   std::vector<Point> empty_vector;  // Extracted points
   unsigned int QQ = 0;
-  unsigned int j = 0;
-  unsigned int f = 0;
   unsigned int pp = 0;
   unsigned int l = 0;
 
@@ -15,18 +13,16 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
     return empty_vector;
   }
 
-  for (j = 1; j != Points.size(); j++) {
-    if (Points[j - 1].y < 0 && Points[j].y >= 0) {
-      pp = j;
-
+  for (std::size_t i = 1; i != Points.size(); i++) {
+    if (Points[i - 1].y < 0 && Points[i].y >= 0) {
+      pp = i;
       break;
     }
   }
 
-  for (f = 0; f < Points.size() - 1; ++f) {
-    if (Points[f].y >= 0 && Points[f + 1].y < 0) {
-      QQ = f;
-
+  for (std::size_t i = 0; i < Points.size() - 1; ++i) {
+    if (Points[i].y >= 0 && Points[i + 1].y < 0) {
+      QQ = i;
       break;
     }
   }
