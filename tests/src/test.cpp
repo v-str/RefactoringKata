@@ -9,12 +9,12 @@
 
 using namespace function_test;
 
-TEST(FunctionTest, sizeTest) {
+TEST(FunctionTest, SizeTest) {
   std::vector<Point> temp_vector;
   EXPECT_EQ(extractPoints_1(temp_vector).size(), 0);
 }
 
-TEST(FunctionTest, getEmptyVector) {
+TEST(FunctionTest, GetEmptyVector) {
   vector<Point> test_vector;
 
   Point temp_point;
@@ -34,7 +34,7 @@ TEST(FunctionTest, getEmptyVector) {
   EXPECT_EQ(result_vector.size(), 0);
 }
 
-TEST(FunctionTest, getSameVector) {
+TEST(FunctionTest, GetSameVector) {
   vector<Point> test_vector;
 
   Point temp_point;
@@ -119,4 +119,54 @@ TEST(FunctionTest, MoveVectorValue) {
   }
 
   EXPECT_EQ(extractPoints_1(test_vector).size(), 0);
+}
+
+TEST(FunctionTest, GetOnlyFirstPositiveParameter) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = -1;
+
+  for (int i = 0; i < 8; ++i) {
+    if (i == 0) {
+      temp_point.y = 1;
+    } else {
+      temp_point.y = -1;
+    }
+    test_vector.push_back(temp_point);
+  }
+
+  vector<Point> result_vector = extractPoints_1(test_vector);
+
+  for (std::size_t i = 0; i < result_vector.size(); ++i) {
+    if (result_vector.at(i).y > 0) {
+      EXPECT_EQ(result_vector[i].y, 1);
+    } else {
+      EXPECT_EQ(result_vector[i].y, -1);
+    }
+  }
+}
+
+TEST(FunctionTest, GetRunTimeError) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = -1;
+
+  for (int i = 0; i < 6; ++i) {
+    if (i == 0 || i == 4) {
+      temp_point.y = 1;
+    } else {
+      temp_point.y = -1;
+    }
+    test_vector.push_back(temp_point);
+  }
+
+  try {
+    vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    EXPECT_EQ(error.what(), string("Unexpected order"));
+  }
 }
