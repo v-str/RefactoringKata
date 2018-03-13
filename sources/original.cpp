@@ -4,12 +4,15 @@
 #include <stdexcept>
 
 const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
-  std::vector<Point> Result;  // Extracted points
-  int QQ;
-  int j = 0, f = 0, pp = QQ = 0, l = 0;
+  std::vector<Point> empty_vector;  // Extracted points
+  unsigned int QQ = 0;
+  unsigned int j = 0;
+  unsigned int f = 0;
+  unsigned int pp = 0;
+  unsigned int l = 0;
 
   if (Points.size() == 0) {
-    return Result;
+    return empty_vector;
   }
 
   for (j = 1; j != Points.size(); j++) {
@@ -32,7 +35,7 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
     if ((*Points.begin()).y >= 0) {
       return Points;
     } else {
-      return Result;
+      return empty_vector;
     }
   }
 
@@ -54,5 +57,5 @@ const std::vector<Point> extractPoints_1(std::vector<Point> &Points) {
     if (++l >= Points.size()) l = 0;  // some magic
   }
 
-  return std::move(Result);  // move Result
+  return std::move(empty_vector);  // move Result
 }
