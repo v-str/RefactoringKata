@@ -8,6 +8,6 @@ struct Point {
   int y = 0;
 };
 
-const std::vector<Point> extractPoints_1(std::vector<Point> &Points);
+const std::vector<Point> extractPoints_1(const std::vector<Point> &Points);
 
 #endif  // ORIGIN_H
