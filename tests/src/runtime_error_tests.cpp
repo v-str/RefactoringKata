@@ -15,7 +15,7 @@ TEST(FunctionTest, GetRunTimeError1) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -42,7 +42,7 @@ TEST(FunctionTest, GetRunTimeError2) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(temp_point);
   }
@@ -69,7 +69,7 @@ TEST(FunctionTest, GetRunTimeError3) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -96,7 +96,7 @@ TEST(FunctionTest, GetRunTimeError4) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -123,7 +123,7 @@ TEST(FunctionTest, GetRunTimeError5) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -150,7 +150,7 @@ TEST(FunctionTest, GetRunTimeError6) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -177,7 +177,7 @@ TEST(FunctionTest, GetRunTimeError7) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -204,7 +204,7 @@ TEST(FunctionTest, GetRunTimeError8) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -231,7 +231,7 @@ TEST(FunctionTest, GetRunTimeError9) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -258,7 +258,7 @@ TEST(FunctionTest, GetRunTimeError10) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -285,7 +285,7 @@ TEST(FunctionTest, GetRunTimeError11) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -312,7 +312,7 @@ TEST(FunctionTest, GetRunTimeError12) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -339,7 +339,7 @@ TEST(FunctionTest, GetRunTimeError13) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -366,7 +366,7 @@ TEST(FunctionTest, GetRunTimeError14) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -393,7 +393,7 @@ TEST(FunctionTest, GetRunTimeError15) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -420,7 +420,7 @@ TEST(FunctionTest, GetRunTimeError16) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -447,7 +447,7 @@ TEST(FunctionTest, GetRunTimeError17) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -474,7 +474,7 @@ TEST(FunctionTest, GetRunTimeError18) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -501,7 +501,7 @@ TEST(FunctionTest, GetRunTimeError19) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }

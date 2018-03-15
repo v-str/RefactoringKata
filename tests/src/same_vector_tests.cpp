@@ -11,7 +11,7 @@ TEST(FunctionTest, GetSameVector1) {
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
     test_vector.push_back(Point(temp_point));
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
   }
 
   std::cout << "\n";
@@ -38,7 +38,7 @@ TEST(FunctionTest, GetSameVector2) {
     } else {
       temp_point.y = -1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(temp_point);
   }

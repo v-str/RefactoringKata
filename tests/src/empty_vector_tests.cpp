@@ -20,7 +20,7 @@ TEST(FunctionTest, GetEmptyVector1) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -44,7 +44,7 @@ TEST(FunctionTest, GetEmptyVector2) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -69,7 +69,7 @@ TEST(FunctionTest, GetEmptyVector3) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -92,7 +92,7 @@ TEST(FunctionTest, GetEmptyVector4) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -117,7 +117,7 @@ TEST(FunctionTest, GetEmptyVector5) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -139,7 +139,7 @@ TEST(FunctionTest, GetEmptyVector6) {
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
     temp_point.y = -1;
 
-    std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -159,12 +159,13 @@ TEST(FunctionTest, GetEmptyVector7) {
   temp_point.y = 1;
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
-    if (i == 0 || i == 1 || i == 3) {
+    if (i == 0 || i == 2) {
       temp_point.y = -1;
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -184,12 +185,13 @@ TEST(FunctionTest, GetEmptyVector8) {
   temp_point.y = 1;
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
-    if (i == 4) {
-      temp_point.y = 1;
-    } else {
+    if (i == 0 || i == 1 || i == 3) {
       temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
     }
-    std::cout << temp_point.y << " ";
+
+    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
@@ -197,8 +199,6 @@ TEST(FunctionTest, GetEmptyVector8) {
   std::cout << "\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
-
-  std::cout << "HERE\n";
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
