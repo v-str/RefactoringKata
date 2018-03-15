@@ -91,10 +91,10 @@ TEST(FunctionTest, GetRunTimeError4) {
   temp_point.y = 1;
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
-    if (i == 2 || i == 3 || i == 4 || i == 5) {
-      temp_point.y = -1;
-    } else {
+    if (i == 0 || i == 1) {
       temp_point.y = 1;
+    } else {
+      temp_point.y = -1;
     }
     std::cout << temp_point.y << "     ";
 
@@ -118,7 +118,7 @@ TEST(FunctionTest, GetRunTimeError5) {
   temp_point.y = 1;
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
-    if (i == 2 || i == 4 || i == 5) {
+    if (i == 4 || i == 5) {
       temp_point.y = -1;
     } else {
       temp_point.y = 1;
@@ -145,7 +145,7 @@ TEST(FunctionTest, GetRunTimeError6) {
   temp_point.y = 1;
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
-    if (i == 2 || i == 3 || i == 5) {
+    if (i == 3 || i == 5) {
       temp_point.y = -1;
     } else {
       temp_point.y = 1;

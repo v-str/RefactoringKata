@@ -38,6 +38,9 @@ const std::vector<Point> extractPoints_1(const std::vector<Point> &Points) {
 
   unsigned int temp = first_before_negative;
 
+  std::cout << "firts before: " << first_before_negative
+            << " first after: " << first_after_negative << "\n";
+
   while (temp != first_after_negative) {
     if (Points[temp].y >= 0) {
       throw std::runtime_error("Unexpected order");

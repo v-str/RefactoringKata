@@ -11,7 +11,7 @@
 
 #include <original.h>
 
-static const int kVectorSize = 6;
-static const int kNull = 0;
+static constexpr int kVectorSize = 6;
+static constexpr int kNull = 0;
 
 #endif  // TEST_H
