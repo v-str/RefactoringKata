@@ -34,6 +34,8 @@ TEST(FunctionTest, GetEmptyVector) {
     test_vector.push_back(Point(temp_point));
   }
 
+  std::cout << "\n";
+
   vector<Point> result_vector = extractPoints_1(test_vector);
 
   EXPECT_EQ(result_vector.size(), 0);
@@ -46,8 +48,8 @@ TEST(FunctionTest, GetEmptyVector2) {
   temp_point.x = 1;
   temp_point.y = 1;
 
-  for (int i = kNull; i < kVectorSize; ++i) {
-    if (i == 4 || i == 5) {
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 3 || i == 4 || i == 5) {
       temp_point.y = 1;
     } else {
       temp_point.y = -1;
@@ -56,7 +58,9 @@ TEST(FunctionTest, GetEmptyVector2) {
 
     test_vector.push_back(Point(temp_point));
   }
-  std::cout << temp_point.y << "\n";
+
+  std::cout << "\n";
+
   EXPECT_EQ(extractPoints_1(test_vector).size(), 0);
 }
 
@@ -71,6 +75,8 @@ TEST(FunctionTest, GetSameVector) {
     test_vector.push_back(Point(temp_point));
     std::cout << temp_point.y << " ";
   }
+
+  std::cout << "\n";
 
   vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -88,7 +94,7 @@ TEST(FunctionTest, GetSameVector2) {
   temp_point.x = 1;
   temp_point.y = -1;
 
-  for (int i = kNull; i < kVectorSize; ++i) {
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
     if (i == 0) {
       temp_point.y = 1;
     } else {
@@ -98,7 +104,9 @@ TEST(FunctionTest, GetSameVector2) {
 
     test_vector.push_back(temp_point);
   }
-  std::cout << temp_point.y << "\n";
+
+  std::cout << "\n";
+
   vector<Point> result_vector = extractPoints_1(test_vector);
 
   for (std::size_t i = 0; i < result_vector.size(); ++i) {
@@ -117,7 +125,7 @@ TEST(FunctionTest, GetRunTimeError) {
   temp_point.x = 1;
   temp_point.y = 1;
 
-  for (int i = kNull; i < kVectorSize; ++i) {
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
     if (i == 0 || i == 3 || i == 5) {
       temp_point.y = 1;
     } else {
@@ -127,6 +135,8 @@ TEST(FunctionTest, GetRunTimeError) {
 
     test_vector.push_back(Point(temp_point));
   }
+
+  std::cout << "\n";
 
   try {
     vector<Point> result_vector = extractPoints_1(test_vector);
@@ -142,7 +152,7 @@ TEST(FunctionTest, GetRunTimeError2) {
   temp_point.x = 1;
   temp_point.y = 1;
 
-  for (int i = kNull; i < kVectorSize; ++i) {
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
     if (i == 1 || i == 2 || i == 5) {
       temp_point.y = 1;
     } else {
@@ -153,7 +163,7 @@ TEST(FunctionTest, GetRunTimeError2) {
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << temp_point.y << "\n";
+  std::cout << "\n";
 
   try {
     vector<Point> result_vector = extractPoints_1(test_vector);
@@ -169,7 +179,7 @@ TEST(FunctionTest, GetRunTimeError3) {
   temp_point.x = 1;
   temp_point.y = -1;
 
-  for (int i = kNull; i < kVectorSize; ++i) {
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
     if (i == 0 || i == 4) {
       temp_point.y = 1;
     } else {
@@ -179,7 +189,36 @@ TEST(FunctionTest, GetRunTimeError3) {
 
     test_vector.push_back(temp_point);
   }
-  std::cout << temp_point.y << "\n";
+
+  std::cout << "\n";
+
+  try {
+    vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    EXPECT_EQ(error.what(), string("Unexpected order"));
+  }
+}
+
+TEST(FunctionTest, GetRunTimeError4) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 3 || i == 4 || i == 5) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  std::cout << "\n";
+
   try {
     vector<Point> result_vector = extractPoints_1(test_vector);
   } catch (std::runtime_error& error) {
