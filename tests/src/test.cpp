@@ -29,12 +29,12 @@ TEST(FunctionTest, GetEmptyVector1) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -53,12 +53,12 @@ TEST(FunctionTest, GetEmptyVector2) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -78,12 +78,12 @@ TEST(FunctionTest, GetEmptyVector3) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   EXPECT_EQ(extractPoints_1(test_vector).size(), 0);
 }
@@ -101,12 +101,12 @@ TEST(FunctionTest, GetEmptyVector4) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -126,12 +126,12 @@ TEST(FunctionTest, GetEmptyVector5) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -148,12 +148,12 @@ TEST(FunctionTest, GetEmptyVector6) {
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
     temp_point.y = -1;
 
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n\n\n";
+  std::cout << "\n\n\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -169,10 +169,10 @@ TEST(FunctionTest, GetSameVector1) {
 
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
     test_vector.push_back(Point(temp_point));
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -196,12 +196,12 @@ TEST(FunctionTest, GetSameVector2) {
     } else {
       temp_point.y = -1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(temp_point);
   }
 
-  // std::cout << "\n\n\n";
+  std::cout << "\n\n\n";
 
   std::vector<Point> result_vector = extractPoints_1(test_vector);
 
@@ -223,12 +223,12 @@ TEST(FunctionTest, GetRunTimeError1) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -250,12 +250,12 @@ TEST(FunctionTest, GetRunTimeError2) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(temp_point);
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -277,12 +277,12 @@ TEST(FunctionTest, GetRunTimeError3) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -304,12 +304,12 @@ TEST(FunctionTest, GetRunTimeError4) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -331,12 +331,12 @@ TEST(FunctionTest, GetRunTimeError5) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -358,12 +358,12 @@ TEST(FunctionTest, GetRunTimeError6) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -385,12 +385,12 @@ TEST(FunctionTest, GetRunTimeError7) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -412,12 +412,12 @@ TEST(FunctionTest, GetRunTimeError8) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -439,12 +439,12 @@ TEST(FunctionTest, GetRunTimeError9) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -466,12 +466,12 @@ TEST(FunctionTest, GetRunTimeError10) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -493,12 +493,12 @@ TEST(FunctionTest, GetRunTimeError11) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
@@ -520,16 +520,98 @@ TEST(FunctionTest, GetRunTimeError12) {
     } else {
       temp_point.y = 1;
     }
-    // std::cout << temp_point.y << " ";
+    std::cout << temp_point.y << " ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  // std::cout << "\n";
+  std::cout << "\n";
 
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
   } catch (std::runtime_error& error) {
+    EXPECT_EQ(error.what(), std::string("Unexpected order"));
+  }
+}
+
+TEST(FunctionTest, GetRunTimeError13) {
+  std::vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 3) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  std::cout << "\n";
+
+  try {
+    std::vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    EXPECT_EQ(error.what(), std::string("Unexpected order"));
+  }
+}
+
+TEST(FunctionTest, GetRunTimeError14) {
+  std::vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 4) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  std::cout << "\n";
+
+  try {
+    std::vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    EXPECT_EQ(error.what(), std::string("Unexpected order"));
+  }
+}
+
+TEST(FunctionTest, GetRunTimeError15) {
+  std::vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 0 || i == 3) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  std::cout << "\n";
+
+  try {
+    std::vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    std::cout << "\nHeRE\n\n";
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
 }
