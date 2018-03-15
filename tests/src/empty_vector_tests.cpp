@@ -1,10 +1,8 @@
 #include <test.h>
 
 TEST(FunctionTest, SizeTest) {
-  std::cout << "\n\n\n";
-
   std::vector<Point> temp_vector;
-  EXPECT_EQ(extractPoints_1(temp_vector).size(), 0);
+  EXPECT_EQ(ExtractFirstPositivePoints(temp_vector).size(), 0);
 }
 
 TEST(FunctionTest, GetEmptyVector1) {
@@ -20,14 +18,11 @@ TEST(FunctionTest, GetEmptyVector1) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -44,14 +39,11 @@ TEST(FunctionTest, GetEmptyVector2) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), 0);
 }
@@ -69,14 +61,11 @@ TEST(FunctionTest, GetEmptyVector3) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  EXPECT_EQ(extractPoints_1(test_vector).size(), 0);
+  EXPECT_EQ(ExtractFirstPositivePoints(test_vector).size(), 0);
 }
 
 TEST(FunctionTest, GetEmptyVector4) {
@@ -92,14 +81,11 @@ TEST(FunctionTest, GetEmptyVector4) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -117,14 +103,11 @@ TEST(FunctionTest, GetEmptyVector5) {
     } else {
       temp_point.y = 1;
     }
-    std::cout << temp_point.y << "     ";
 
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -139,14 +122,10 @@ TEST(FunctionTest, GetEmptyVector6) {
   for (unsigned int i = kNull; i < kVectorSize; ++i) {
     temp_point.y = -1;
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -165,14 +144,10 @@ TEST(FunctionTest, GetEmptyVector7) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -191,14 +166,10 @@ TEST(FunctionTest, GetEmptyVector8) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -217,14 +188,10 @@ TEST(FunctionTest, GetEmptyVector9) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -243,14 +210,10 @@ TEST(FunctionTest, GetEmptyVector10) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -269,14 +232,10 @@ TEST(FunctionTest, GetEmptyVector11) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -295,14 +254,10 @@ TEST(FunctionTest, GetEmptyVector12) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -321,14 +276,10 @@ TEST(FunctionTest, GetEmptyVector13) {
       temp_point.y = 1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -347,14 +298,10 @@ TEST(FunctionTest, GetEmptyVector14) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -373,14 +320,10 @@ TEST(FunctionTest, GetEmptyVector15) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -399,14 +342,10 @@ TEST(FunctionTest, GetEmptyVector16) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -425,14 +364,10 @@ TEST(FunctionTest, GetEmptyVector17) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -451,14 +386,10 @@ TEST(FunctionTest, GetEmptyVector18) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -477,14 +408,10 @@ TEST(FunctionTest, GetEmptyVector19) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -503,14 +430,10 @@ TEST(FunctionTest, GetEmptyVector20) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -529,14 +452,10 @@ TEST(FunctionTest, GetEmptyVector21) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -555,14 +474,10 @@ TEST(FunctionTest, GetEmptyVector22) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
@@ -581,14 +496,10 @@ TEST(FunctionTest, GetEmptyVector23) {
       temp_point.y = -1;
     }
 
-    std::cout << temp_point.y << "     ";
-
     test_vector.push_back(Point(temp_point));
   }
 
-  std::cout << "\n";
-
-  std::vector<Point> result_vector = extractPoints_1(test_vector);
+  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), kNull);
 }
