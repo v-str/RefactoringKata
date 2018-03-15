@@ -460,3 +460,31 @@ TEST(FunctionTest, GetRunTimeError17) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
 }
+
+TEST(FunctionTest, GetRunTimeError18) {
+  std::vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 0 || i == 1 || i == 4) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  std::cout << "\n";
+
+  try {
+    std::vector<Point> result_vector = extractPoints_1(test_vector);
+  } catch (std::runtime_error& error) {
+    std::cout << "HERE\n";
+    EXPECT_EQ(error.what(), std::string("Unexpected order"));
+  }
+}
