@@ -3,30 +3,35 @@
 #include <math.h>
 #include <stdexcept>
 
+#include <iostream>
+
 const std::vector<Point> extractPoints_1(const std::vector<Point> &Points) {
   if (Points.empty()) {
     return std::vector<Point>();
   }
 
-  unsigned int index_after_negative_value = 0;
-
-  for (std::size_t i = 1; i != Points.size(); i++) {
-    if (Points[i - 1].y < 0 && Points[i].y >= 0) {
-      index_after_negative_value = i;
-      break;
-    }
-  }
-
-  unsigned int index_before_negative_value = 0;
+  unsigned int first_before_negative = 0;
 
   for (std::size_t i = 0; i < Points.size() - 1; ++i) {
     if (Points[i].y >= 0 && Points[i + 1].y < 0) {
-      index_before_negative_value = i;
+      first_before_negative = i;
       break;
     }
   }
 
-  if (index_after_negative_value == index_before_negative_value) {
+  unsigned int first_after_negative = 0;
+
+  for (std::size_t i = 1; i != Points.size(); i++) {
+    if (Points[i - 1].y < 0 && Points[i].y >= 0) {
+      first_after_negative = i;
+      break;
+    }
+  }
+
+  std::cout << "\nfirst before negative: " << first_before_negative << "\n"
+            << "first after negative: " << first_after_negative << "\n\n";
+
+  if (first_before_negative == first_after_negative) {
     if ((*Points.begin()).y >= 0) {
       return Points;
     } else {
@@ -34,19 +39,19 @@ const std::vector<Point> extractPoints_1(const std::vector<Point> &Points) {
     }
   }
 
-  unsigned int temp = index_after_negative_value;
+  unsigned int temp = first_before_negative;
 
-  while (temp != index_before_negative_value) {
-    if (Points[temp].y < 0) {
+  while (temp != first_after_negative) {
+    if (Points[temp].y >= 0) {
       throw std::runtime_error("Unexpected order");
     }
     if (++temp >= Points.size()) temp = 0;  // some magic
   }
 
-  temp = index_before_negative_value;
+  temp = first_after_negative;
 
-  while (temp != index_after_negative_value) {
-    if (Points[temp].y >= 0) {
+  while (temp != first_before_negative) {
+    if (Points[temp].y < 0) {
       throw std::runtime_error("Unexpected order");
     }
     if (++temp >= Points.size()) temp = 0;  // some magic
