@@ -39,6 +39,27 @@ TEST(FunctionTest, GetEmptyVector) {
   EXPECT_EQ(result_vector.size(), 0);
 }
 
+TEST(FunctionTest, GetEmptyVector2) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (int i = kNull; i < kVectorSize; ++i) {
+    if (i == 4 || i == 5) {
+      temp_point.y = 1;
+    } else {
+      temp_point.y = -1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+  std::cout << temp_point.y << "\n";
+  EXPECT_EQ(extractPoints_1(test_vector).size(), 0);
+}
+
 TEST(FunctionTest, GetSameVector) {
   vector<Point> test_vector;
 
@@ -164,25 +185,4 @@ TEST(FunctionTest, GetRunTimeError3) {
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), string("Unexpected order"));
   }
-}
-
-TEST(FunctionTest, GetEmptyVector2) {
-  vector<Point> test_vector;
-
-  Point temp_point;
-  temp_point.x = 1;
-  temp_point.y = 1;
-
-  for (int i = kNull; i < kVectorSize; ++i) {
-    if (i == 4 || i == 5) {
-      temp_point.y = 1;
-    } else {
-      temp_point.y = -1;
-    }
-    std::cout << temp_point.y << " ";
-
-    test_vector.push_back(Point(temp_point));
-  }
-  std::cout << temp_point.y << "\n";
-  EXPECT_EQ(extractPoints_1(test_vector).size(), 0);
 }
