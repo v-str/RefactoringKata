@@ -623,7 +623,6 @@ TEST(FunctionTest, GetRunTimeError23) {
   try {
     std::vector<Point> result_vector = extractPoints_1(test_vector);
   } catch (std::runtime_error& error) {
-    std::cout << "HERE\n";
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
 }
