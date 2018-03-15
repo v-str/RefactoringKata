@@ -8,13 +8,10 @@
 
 const std::vector<Point> ExtractFirstPositivePoints(
     const std::vector<Point> &Points) {
-  if (Points.empty()) {
-    return std::vector<Point>();
-  }
-
   bool is_all_elements_positive =
       std::all_of(Points.begin(), Points.end(),
                   [](const Point &point) { return point.y >= 0; });
+
   if (is_all_elements_positive) {
     return Points;
   }
@@ -23,8 +20,11 @@ const std::vector<Point> ExtractFirstPositivePoints(
       std::count_if(Points.begin(), Points.end(),
                     [](const Point &point) { return point.y >= 0; }) == 1 &&
       Points.begin()->y >= 0;
+
   if (is_only_first_element_positive) {
     return Points;
+  } else {
+    return std::move(std::vector<Point>());
   }
 
   unsigned int first_before_negative = 0;
@@ -42,12 +42,6 @@ const std::vector<Point> ExtractFirstPositivePoints(
     if (Points[i - 1].y < 0 && Points[i].y >= 0) {
       first_after_negative = i;
       break;
-    }
-  }
-
-  if (first_before_negative == first_after_negative) {
-    if ((*Points.begin()).y < 0) {
-      return std::vector<Point>();
     }
   }
 
