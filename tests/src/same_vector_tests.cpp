@@ -11,7 +11,7 @@ TEST(FunctionTest, GetSameVector1) {
     test_vector.push_back(Point(temp_point));
   }
 
-  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+  std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
 
   EXPECT_EQ(result_vector.size(), test_vector.size());
 
@@ -37,7 +37,7 @@ TEST(FunctionTest, GetSameVector2) {
     test_vector.push_back(temp_point);
   }
 
-  std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+  std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
 
   for (unsigned int i = 0; i < result_vector.size(); ++i) {
     EXPECT_EQ(result_vector[i].y, test_vector[i].y);

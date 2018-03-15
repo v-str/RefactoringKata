@@ -18,7 +18,7 @@ TEST(FunctionTest, GetRunTimeError1) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -42,7 +42,7 @@ TEST(FunctionTest, GetRunTimeError2) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -66,7 +66,7 @@ TEST(FunctionTest, GetRunTimeError3) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -90,7 +90,7 @@ TEST(FunctionTest, GetRunTimeError4) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -114,7 +114,7 @@ TEST(FunctionTest, GetRunTimeError5) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -138,7 +138,7 @@ TEST(FunctionTest, GetRunTimeError6) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -162,7 +162,7 @@ TEST(FunctionTest, GetRunTimeError7) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -186,7 +186,7 @@ TEST(FunctionTest, GetRunTimeError8) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -210,7 +210,7 @@ TEST(FunctionTest, GetRunTimeError9) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -234,7 +234,7 @@ TEST(FunctionTest, GetRunTimeError10) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -258,7 +258,7 @@ TEST(FunctionTest, GetRunTimeError11) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -282,7 +282,7 @@ TEST(FunctionTest, GetRunTimeError12) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -306,7 +306,7 @@ TEST(FunctionTest, GetRunTimeError13) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -330,7 +330,7 @@ TEST(FunctionTest, GetRunTimeError14) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -354,7 +354,7 @@ TEST(FunctionTest, GetRunTimeError15) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -378,7 +378,7 @@ TEST(FunctionTest, GetRunTimeError16) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -402,7 +402,7 @@ TEST(FunctionTest, GetRunTimeError17) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -426,7 +426,7 @@ TEST(FunctionTest, GetRunTimeError18) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -450,7 +450,7 @@ TEST(FunctionTest, GetRunTimeError19) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -474,7 +474,7 @@ TEST(FunctionTest, GetRunTimeError20) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -498,7 +498,7 @@ TEST(FunctionTest, GetRunTimeError21) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -522,7 +522,7 @@ TEST(FunctionTest, GetRunTimeError22) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }
@@ -546,7 +546,7 @@ TEST(FunctionTest, GetRunTimeError23) {
   }
 
   try {
-    std::vector<Point> result_vector = ExtractFirstPositivePoints(test_vector);
+    std::vector<Point> result_vector = ExtractPositivePoints(test_vector);
   } catch (std::runtime_error& error) {
     EXPECT_EQ(error.what(), std::string("Unexpected order"));
   }

@@ -8,7 +8,7 @@ struct Point {
   int y = 0;
 };
 
-const std::vector<Point> ExtractFirstPositivePoints(
+const std::vector<Point> ExtractPositivePoints(
     const std::vector<Point> &Points);
 
 #endif  // ORIGIN_H
