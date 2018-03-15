@@ -1,6 +1,5 @@
 #include <original.h>
 
-#include <math.h>
 #include <algorithm>
 #include <stdexcept>
 
@@ -16,15 +15,12 @@ const std::vector<Point> ExtractFirstPositivePoints(
     return Points;
   }
 
-  bool is_only_first_element_positive =
+  unsigned int amount_of_positive_values =
       std::count_if(Points.begin(), Points.end(),
-                    [](const Point &point) { return point.y >= 0; }) == 1 &&
-      Points.begin()->y >= 0;
+                    [](const Point &point) { return point.y >= 0; });
 
-  if (is_only_first_element_positive) {
+  if (amount_of_positive_values == 1 && Points.begin()->y >= 0) {
     return Points;
-  } else {
-    return std::move(std::vector<Point>());
   }
 
   unsigned int first_before_negative = 0;
