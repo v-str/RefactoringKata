@@ -118,6 +118,37 @@ TEST(FunctionTest, GetSameVector2) {
   }
 }
 
+TEST(FunctionTest, GetSameVector3) {
+  vector<Point> test_vector;
+
+  Point temp_point;
+  temp_point.x = 1;
+  temp_point.y = 1;
+
+  for (unsigned int i = kNull; i < kVectorSize; ++i) {
+    if (i == 0) {
+      temp_point.y = -1;
+    } else {
+      temp_point.y = 1;
+    }
+    std::cout << temp_point.y << " ";
+
+    test_vector.push_back(Point(temp_point));
+  }
+
+  std::cout << "\n";
+
+  vector<Point> result_vector = extractPoints_1(test_vector);
+
+  for (std::size_t i = 0; i < result_vector.size(); ++i) {
+    if (result_vector.at(i).y > 0) {
+      EXPECT_EQ(result_vector[i].y, 1);
+    } else {
+      EXPECT_EQ(result_vector[i].y, -1);
+    }
+  }
+}
+
 TEST(FunctionTest, GetRunTimeError) {
   vector<Point> test_vector;
 

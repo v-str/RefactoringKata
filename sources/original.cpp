@@ -42,13 +42,12 @@ const std::vector<Point> extractPoints_1(const std::vector<Point> &Points) {
   unsigned int temp = first_before_negative;
 
   while (temp != first_after_negative) {
+    std::cout << "temp = " << temp << "\n\n";
     if (Points[temp].y >= 0) {
-      std::cout << "\n\nHERE1\n\n";
       throw std::runtime_error("Unexpected order");
     }
     if (++temp >= Points.size()) temp = 0;  // some magic
   }
 
-  std::cout << "\n\nHERE2\n\n";
   return std::move(std::vector<Point>());  // move Result
 }
